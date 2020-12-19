@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Nav />
     <!-- Intro-->
     <section class="container my-lg-2 pt-5 pb-lg-7">
       <div class="row align-items-center">

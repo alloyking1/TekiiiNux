@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Nav />
     <div>
       <section
         class="jarallax bg-gradient pt-5 pb-7 pt-md-7"

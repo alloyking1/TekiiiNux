@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Nav />
     <!-- Intro-->
     <!-- {{ siteName }} -->
     <section

@@ -1,7 +1,5 @@
 <template>
   <div>
-    <Nav />
-
     <div class="p-5">
       <main>
         <section class="section section-lg bg_section">

@@ -2,15 +2,18 @@
   <div>
     <div>
       <button class="open-button btn btn-default" @click="openForm()">
-        <i class="fe-music" style="color: #6874bb"></i>
+        <i class="fe-messenger" style="color: #6874bb"></i>
       </button>
-      <div class="chat-popup" id="myForm2">
+      <div class="chat-popup" id="myForm">
         <div class="form-container">
-          <h1>Radio</h1>
-
-          <audio controls autoplay="autoplay">
-            <source src="http://66.85.88.174:80/hot108" type="audio/mp3" />
-          </audio>
+          <h1>Chat</h1>
+          <!-- chart iFrame -->
+          <iframe
+            src="https://minnit.chat/mytalkbox?embed&nickname="
+            style="border: none; width: 90%; height: 500px"
+            allowTransparency="true"
+          >
+          </iframe>
 
           <button type="button" class="btn cancel" @click="closeForm()">
             <i class="fe-x-square"></i>
@@ -29,11 +32,11 @@ export default {
 
   methods: {
     openForm() {
-      document.getElementById("myForm2").style.display = "block";
+      document.getElementById("myForm").style.display = "block";
     },
 
     closeForm() {
-      document.getElementById("myForm2").style.display = "none";
+      document.getElementById("myForm").style.display = "none";
     },
   },
 };
@@ -48,7 +51,7 @@ export default {
   cursor: pointer;
   opacity: 0.8;
   position: fixed;
-  bottom: 95px;
+  bottom: 23px;
   right: 28px;
   border-radius: 50%;
   border: 0.0625rem solid rgba(0, 0, 0, 0.05);
@@ -82,7 +85,7 @@ export default {
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
-  background: #181717;
+  background: #f1f1f1;
   resize: none;
   min-height: 200px;
 }
