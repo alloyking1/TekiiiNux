@@ -14,7 +14,9 @@
 
               <div class="col-md-6 order-md-1">
                 <div class="pr-md-5">
-                  <h1 style="font-size: 5em; font-weight: bold">Tekiii</h1>
+                  <h1 style="font-size: 5em; font-weight: bold">
+                    {{ this.$SiteName }}
+                  </h1>
                   <h3>Podcast</h3>
                   <p>
                     We podcast about a whole lot ranging from the latest tech
@@ -31,8 +33,8 @@
                     Radio
                   </button>
 
-                  <router-link to="/" class="btn btn-outline-primary"
-                    >Home</router-link
+                  <NuxtLink to="/" class="btn btn-outline-primary"
+                    >Home</NuxtLink
                   >
                   <!-- <router-link to="/" class="btn btn-outline-primary"
                     >Blog</router-link

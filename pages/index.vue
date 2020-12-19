@@ -1,7 +1,6 @@
 <template>
   <div>
     <!-- Intro-->
-    <!-- {{ siteName }} -->
     <section
       class="d-flex align-items-center position-relative bg-dark bg-size-cover bg-position-center fh-section overflow-hidden pt-6 pb-lg-5"
       style="background-image: url(img/demo/presentation/intro/bg.jpg)"
@@ -117,5 +116,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    console.log(process.env.siteName);
+  },
+};
 </script>
