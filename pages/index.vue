@@ -111,14 +111,6 @@
       <PodcastRename />
     </section>
     <!-- Podcast and radio-->
-    <Footer />
   </div>
 </template>
 
-<script>
-export default {
-  mounted() {
-    console.log(process.env.siteName);
-  },
-};
-</script>

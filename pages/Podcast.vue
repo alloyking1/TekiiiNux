@@ -66,7 +66,5 @@
         </section>
       </main>
     </div>
-
-    <FooterTwo />
   </div>
 </template>

@@ -17,9 +17,9 @@
         <EmailList />
         <hr class="hr-light mt-5 pb-4" />
         <p class="font-size-sm text-center mb-4 py-3">
-          <!-- <span class="text-light opacity-50 mr-1"
+          <span class="text-light opacity-50 mr-1"
             >© {{ this.$SiteName }} {{ new Date().getFullYear() }}</span
-          > -->
+          >
           |
           <router-link to="/contact">Contact us</router-link>
         </p>

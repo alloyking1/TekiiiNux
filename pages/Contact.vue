@@ -115,7 +115,5 @@
       </section>
     </div>
     <br /><br /><br />
-
-    <FooterTwo />
   </div>
 </template>

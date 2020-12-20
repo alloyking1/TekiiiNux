@@ -59,7 +59,5 @@
       </div>
     </section>
     <br /><br /><br />
-
-    <FooterTwo />
   </div>
 </template>
