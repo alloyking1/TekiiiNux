@@ -57,8 +57,7 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [// https://go.nuxtjs.dev/bootstrap
   'bootstrap-vue/nuxt', ["@nuxtjs/prismic", {
-    // "endpoint": "https://tekiii.cdn.prismic.io/api/v2",
-    "endpoint": "https://tamaki.cdn.prismic.io/api/v2",
+    "endpoint": "https://tekiii.cdn.prismic.io/api/v2",
     "apiOptions": {
       "routes": [{
         "type": "page",
