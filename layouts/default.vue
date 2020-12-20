@@ -4,6 +4,7 @@
     <Nuxt />
     <RadioSoundComponent />
     <RadioChat />
+    <FooterTwo />
   </div>
 </template>
 
@@ -56,3 +57,4 @@ html {
   background-color: #35495e;
 }
 </style>
+

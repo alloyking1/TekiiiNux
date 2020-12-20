@@ -15,5 +15,6 @@ Vue.mixin({
 })
 
 Vue.config.productionTip = false;
+Vue.prototype.$Api = process.env.VUE_APP_BASE_URL
 Vue.prototype.$SiteName = process.env.VUE_APP_SITE_NAME
 Vue.prototype.$SlackLink = process.env.VUE_APP_SLACK_LINK

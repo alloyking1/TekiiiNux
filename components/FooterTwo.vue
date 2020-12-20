@@ -135,12 +135,12 @@
           class="container d-md-flex align-items-center justify-content-between pt-3"
         >
           <div class="d-flex flex-wrap align-item-center order-md-1">
-            <a
+            <NuxtLink
               class="d-block mr-grid-gutter mb-3"
-              href="index.html"
+              to="/"
               style="width: 108px"
-              ><img src="img/logo/logo-footer.png" :alt="this.$SiteName"
-            /></a>
+              >{{ this.$SiteName }}</NuxtLink
+            >
             <p class="font-size-sm pt-2 mb-3">
               <span class="text-light opacity-50 mr-1"
                 >© {{ this.$SiteName }} {{ new Date().getFullYear() }}</span
