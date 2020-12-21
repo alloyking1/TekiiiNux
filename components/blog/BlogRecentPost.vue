@@ -25,7 +25,6 @@ export default {
       .get(`${this.$Api}/api/get_recent_posts/?count=3&page=1`)
       .then((res) => {
         this.recentPost = res.data;
-        console.log(this.recentPost);
       });
   },
 };

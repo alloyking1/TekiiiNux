@@ -44,11 +44,8 @@
             </div>
             <hr />
             <!-- comment -->
-            <!-- <Comment :content_id="id" :absolute_url="post.link" /> -->
+            <BlogComment :content_id="id" :absolute_url="post.link" />
           </div>
-
-          <!-- Sidebar-->
-          <!-- <Sidebar /> -->
         </div>
       </div>
     </div>
@@ -67,7 +64,6 @@ export default {
   async mounted() {
     await axios.get(`${this.$Api}/api/get_post/?id=${this.id}`).then((res) => {
       this.post = res.data.post;
-      console.log(this.post.post);
     });
   },
 };
