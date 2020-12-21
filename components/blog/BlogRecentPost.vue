@@ -1,12 +1,13 @@
 <template>
   <div class="container">
     <div v-for="(eachPost, index) in recentPost.posts" :key="index">
-      <router-link
+      <NuxtLink
         class="noRouterLink"
-        :to="{ name: 'blog_single', params: { id: eachPost.id } }"
+        :to="{ name: 'BlogSingle', params: { id: eachPost.id } }"
       >
+        <!-- <NuxtLink class="noRouterLink" to="/blogsingle"> -->
         <BlogPostCard :content="eachPost" />
-      </router-link>
+      </NuxtLink>
     </div>
   </div>
 </template>

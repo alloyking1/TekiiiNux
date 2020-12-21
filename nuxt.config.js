@@ -6,13 +6,6 @@ export default {
     siteName: process.env.VUE_APP_SITE_NAME
   },
 
-  /*
-  ** Prismic module configuration
-  ** Change the API endpoint!
-  */
-  // prismic: {
-  //   endpoint: 'https://techcrunch.cdn.prismic.io/api/v2',
-  // },
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s | Tekiii',
@@ -58,20 +51,9 @@ export default {
   modules: [// https://go.nuxtjs.dev/bootstrap
    ['@nuxtjs/axios'],
    ['nuxt-moment'],
-  // 'bootstrap-vue/nuxt', ["@nuxtjs/prismic", {
-  //   "endpoint": "https://tekiii.cdn.prismic.io/api/v2",
-  //   "apiOptions": {
-  //     "routes": [{
-  //       "type": "page",
-  //       "path": "/:uid"
-  //     }]
-  //   }
-  // }], ["nuxt-sm"]],
   ],
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    // extend(config, ctx) {},
-    // transpile: ["vue-slicezone", "nuxt-sm"]
     transpile: ["vue-slicezone", "nuxt-sm", "vue-slicezone", "nuxt-sm", "vue-slicezone", "nuxt-sm"]
   }
 };
