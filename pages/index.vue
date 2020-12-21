@@ -96,11 +96,9 @@
         <div class="row">
           <div class="col-lg-12">
             <BlogRecentPost />
-            <router-link
-              to="/blog"
-              class="btn btn-outline-primary ml-4"
-              style="margin-top: -10rem"
-              >More Posts</router-link
+            <hr />
+            <NuxtLink to="/blog" class="btn btn-outline-primary mt-3 ml-4"
+              >More Posts</NuxtLink
             >
           </div>
         </div>

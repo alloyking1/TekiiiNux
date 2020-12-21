@@ -56,6 +56,8 @@ export default {
   buildModules: ['@nuxtjs/dotenv'],
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [// https://go.nuxtjs.dev/bootstrap
+   ['@nuxtjs/axios'],
+   ['nuxt-moment'],
   'bootstrap-vue/nuxt', ["@nuxtjs/prismic", {
     "endpoint": "https://tekiii.cdn.prismic.io/api/v2",
     "apiOptions": {
