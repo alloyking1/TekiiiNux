@@ -5,14 +5,16 @@
         <div class="col-lg-9">
           <nav aria-label="breadcrumb">
             <ol class="py-1 my-2 breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Blog</a></li>
+              <NuxtLink class="breadcrumb-item" to="/">Home</NuxtLink>
+              <NuxtLink class="breadcrumb-item" to="/blog">Blog</NuxtLink>
               <li class="breadcrumb-item active" aria-current="page">
-                List no sidebar
+                {{ category.slug }}
               </li>
             </ol>
           </nav>
-          <h1 class="mb-5">Blog</h1>
+          <h1 class="mb-5">{{ category.title }} Category</h1>
+          <hr />
+          <br />
           <div v-for="(eachPost, index) in post" :key="index">
             <div class="">
               <NuxtLink
@@ -24,9 +26,6 @@
               </NuxtLink>
             </div>
           </div>
-
-          <!-- Pagination-->
-          <Pagination />
         </div>
       </div>
     </div>
@@ -40,6 +39,7 @@ export default {
   data() {
     return {
       post: {},
+      category: "",
     };
   },
   async mounted() {
@@ -50,7 +50,7 @@ export default {
         `${this.$Api}api/get_category_posts/?category_id=${this.$route.params.id}&count=6&page=${pages}`
       );
       this.post = request.data.posts;
-      console.log(this.post);
+      this.category = request.data.category;
     } catch {
       console.log("there was an error, Post could not fetch");
     }

@@ -6,11 +6,8 @@
         <hr />
         <br />
         <ol class="py-1 my-2 breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item"><a href="#">Blog</a></li>
-          <li class="breadcrumb-item active" aria-current="page">
-            List no sidebar
-          </li>
+          <NuxtLink class="breadcrumb-item" to="/">Home</NuxtLink>
+          <NuxtLink class="breadcrumb-item" to="/blog">Blog</NuxtLink>
         </ol>
       </nav>
     </div>
@@ -20,7 +17,6 @@
       <hr />
       <BlogCategory />
       <br />
-      <!-- <CategoryCard /> -->
     </div>
   </div>
 </template>

@@ -10,11 +10,10 @@
             <div class="pb-4" style="max-width: 38rem">
               <nav aria-label="breadcrumb">
                 <ol class="py-1 my-2 breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="#">Blog</a></li>
-                  <li class="breadcrumb-item"><a href="#">Category</a></li>
+                  <NuxtLink class="breadcrumb-item" to="/">Home</NuxtLink>
+                  <NuxtLink class="breadcrumb-item" to="/blog">Blog</NuxtLink>
                   <li class="breadcrumb-item active" aria-current="page">
-                    Single post right sidebar
+                    {{ post.slug }}
                   </li>
                 </ol>
               </nav>
