@@ -1,11 +1,6 @@
 require('dotenv').config()
 
 export default {
-  // declear global .env
-  // env: {
-  //   siteName: process.env.VUE_APP_SITE_NAME,
-  // },
-
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s | Tekiii',
@@ -36,7 +31,9 @@ export default {
       "src": "https://cdn.polyfill.io/v2/polyfill.min.js?features=Element.prototype.classList"
     }, {
       "src": "https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.min.js"
-    }]
+    },{ src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js' },
+      { src: 'https://code.jquery.com/jquery-3.3.1.slim.min.js' },
+      { src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js' }]
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ['~/assets/styles/style.css', '~/assets/styles/simplebar.css', '~/assets/styles/custom.css', "vue-essential-slices/src/styles/styles.scss", "vue-essential-slices/src/styles/styles.scss", "vue-essential-slices/src/styles/styles.scss"],
@@ -49,7 +46,7 @@ export default {
   buildModules: ['@nuxtjs/dotenv'],
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [// https://go.nuxtjs.dev/bootstrap
-   ['@nuxtjs/axios', '@nuxtjs/dotenv'],
+   ['@nuxtjs/axios', '@nuxtjs/dotenv', 'bootstrap-vue/nuxt'],
   //  ['@nuxtjs/moment'],
   ],
   // Build Configuration (https://go.nuxtjs.dev/config-build)
