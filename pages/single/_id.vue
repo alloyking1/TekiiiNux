@@ -54,14 +54,14 @@
 <script>
 import axios from "axios";
 export default {
-  props: ["id"],
   data() {
     return {
       post: {},
     };
   },
   async mounted() {
-    await axios.get(`${this.$Api}/api/get_post/?id=${this.id}`).then((res) => {
+    const id = this.$route.params.id;
+    await axios.get(`${this.$Api}/api/get_post/?id=${id}`).then((res) => {
       this.post = res.data.post;
     });
   },

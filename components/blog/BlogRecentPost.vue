@@ -3,9 +3,8 @@
     <div v-for="(eachPost, index) in recentPost.posts" :key="index">
       <NuxtLink
         class="noRouterLink"
-        :to="{ name: 'BlogSingle', params: { id: eachPost.id } }"
+        :to="{ name: 'single-id', params: { id: eachPost.id } }"
       >
-        <!-- <NuxtLink class="noRouterLink" to="/blogsingle"> -->
         <BlogPostCard :content="eachPost" />
       </NuxtLink>
     </div>
