@@ -12,11 +12,13 @@
             </li>
           </ol>
         </nav>
-        <h1 class="mb-5">Blog</h1>
-        <div v-for="(eachPost, index) in posts.posts" :key="index">
+        <h1 class="mb-5">
+          {{ category ? category.category.title : "Loading..." }}
+        </h1>
+        <div v-for="(eachPost, index) in category.posts" :key="index">
           <NuxtLink
             class="noRouterLink"
-            :to="{ name: 'BlogSingle', params: { id: eachPost.id } }"
+            :to="{ name: 'single-id', params: { id: eachPost.id } }"
           >
             <!-- Post-->
             <BlogPostCard :content="eachPost" />
@@ -24,14 +26,29 @@
         </div>
 
         <!-- Pagination-->
-        <!-- <Pagination /> -->
+        <!-- <Pagination />-->
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
-  props: ["posts"],
+  data() {
+    return {
+      category: "",
+    };
+  },
+
+  async mounted() {
+    const id = this.$route.params.postlist;
+    await axios
+      .get(`${this.$Api}/api/get_category_posts/?id=${id}&page=1`)
+      .then((res) => {
+        this.category = res.data;
+        console.log(this.category.category.title);
+      });
+  },
 };
 </script>

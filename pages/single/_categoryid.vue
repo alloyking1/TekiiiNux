@@ -43,7 +43,6 @@ export default {
     };
   },
   async mounted() {
-    console.log(this.$route.params.id);
     const pages = 1;
     try {
       const request = await axios.get(
