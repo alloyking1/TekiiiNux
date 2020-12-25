@@ -1,10 +1,10 @@
-require('dotenv').config();
+require('dotenv').config()
 
 export default {
   // declear global .env
-  env: {
-    siteName: process.env.VUE_APP_SITE_NAME
-  },
+  // env: {
+  //   siteName: process.env.VUE_APP_SITE_NAME,
+  // },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -49,11 +49,12 @@ export default {
   buildModules: ['@nuxtjs/dotenv'],
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [// https://go.nuxtjs.dev/bootstrap
-   ['@nuxtjs/axios'],
+   ['@nuxtjs/axios', '@nuxtjs/dotenv'],
   //  ['@nuxtjs/moment'],
   ],
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     transpile: ["vue-slicezone", "nuxt-sm", "vue-slicezone", "nuxt-sm", "vue-slicezone", "nuxt-sm"]
-  }
+  },
+
 };

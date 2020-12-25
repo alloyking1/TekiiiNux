@@ -18,6 +18,7 @@ Vue.mixin({
 
 // Global variables
 Vue.config.productionTip = false;
-Vue.prototype.$Api = process.env.VUE_APP_BASE_URL
-Vue.prototype.$SiteName = process.env.VUE_APP_SITE_NAME
-Vue.prototype.$SlackLink = process.env.VUE_APP_SLACK_LINK
+Vue.prototype.$Api = process.env.NUXT_ENV_BASE_URL
+Vue.prototype.$SiteName = process.env.NUXT_ENV_SITE_NAME
+Vue.prototype.$SlackLink = process.env.NUXT_ENV_SLACK_LINK
+
