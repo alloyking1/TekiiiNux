@@ -83,50 +83,7 @@
             </div>
           </div>
           <div class="col-md-4 ml-auto mb-3">
-            <div class="cs-widget cs-widget-light mb-4">
-              <h4 class="cs-widget-title">Don’t miss a single story</h4>
-              <p class="font-size-sm text-light opacity-60">
-                Subscribe to our newsletter to receive latest articles to your
-                inbox weekly.
-              </p>
-              <form
-                class="cs-subscribe-form validate"
-                action="#"
-                method="post"
-                name="mc-embedded-subscribe-form"
-                target="_blank"
-                novalidate
-              >
-                <div class="input-group input-group-overlay flex-nowrap">
-                  <div class="input-group-prepend-overlay">
-                    <span class="input-group-text text-muted"
-                      ><i class="fe-mail"></i
-                    ></span>
-                  </div>
-                  <input
-                    class="form-control prepended-form-control"
-                    type="email"
-                    name="EMAIL"
-                    placeholder="Your email"
-                  />
-                  <div class="input-group-append">
-                    <button
-                      class="btn btn-primary"
-                      type="submit"
-                      name="subscribe"
-                    >
-                      Subscribe
-                    </button>
-                  </div>
-                </div>
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div
-                  style="position: absolute; left: -5000px"
-                  aria-hidden="true"
-                ></div>
-                <div class="cs-subscribe-status"></div>
-              </form>
-            </div>
+            <BlogEmailList />
           </div>
         </div>
       </div>
