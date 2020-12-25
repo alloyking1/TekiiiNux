@@ -8,7 +8,7 @@
               <NuxtLink class="breadcrumb-item" to="/">Home</NuxtLink>
               <NuxtLink class="breadcrumb-item" to="/blog">Blog</NuxtLink>
               <li class="breadcrumb-item active" aria-current="page">
-                {{ category.slug }}
+                {{ category ? category.slug : "..." }}
               </li>
             </ol>
           </nav>

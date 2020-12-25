@@ -12,6 +12,7 @@
       </nav>
     </div>
     <BlogRecentPost />
+    <!-- <BlogPostPagination /> -->
     <div class="container pt-5 pb-5" style="margin-top: 8rem; padding: 4rem">
       <h1 class="mb-5">Categories</h1>
       <hr />

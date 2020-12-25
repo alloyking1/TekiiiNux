@@ -8,6 +8,10 @@
         <BlogPostCard :content="eachPost" />
       </NuxtLink>
     </div>
+    <BlogPostPagination
+      :currentPage="this.recentPost.pages"
+      @next-page="nextPageFetch"
+    />
   </div>
 </template>
 
@@ -20,11 +24,22 @@ export default {
     };
   },
   async mounted() {
-    await axios
-      .get(`${this.$Api}/api/get_recent_posts/?count=3&page=1`)
-      .then((res) => {
-        this.recentPost = res.data;
-      });
+    this.fetchPost();
+  },
+
+  methods: {
+    async fetchPost(page = null) {
+      const id = this.$route.params.postlist;
+      await axios
+        .get(`${this.$Api}/api/get_recent_posts/?count=4&page=${page}`)
+        .then((res) => {
+          this.recentPost = res.data;
+        });
+    },
+
+    async nextPageFetch(e) {
+      await this.fetchPost(e);
+    },
   },
 };
 </script>

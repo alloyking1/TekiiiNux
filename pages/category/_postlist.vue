@@ -5,10 +5,10 @@
       <div class="col-lg-9">
         <nav aria-label="breadcrumb">
           <ol class="py-1 my-2 breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Blog</a></li>
+            <NuxtLink class="breadcrumb-item" to="/">Home</NuxtLink>
+            <NuxtLink class="breadcrumb-item" to="/blog">Blog</NuxtLink>
             <li class="breadcrumb-item active" aria-current="page">
-              List no sidebar
+              {{ category ? category.category.title : "Loading..." }}
             </li>
           </ol>
         </nav>
@@ -26,7 +26,10 @@
         </div>
 
         <!-- Pagination-->
-        <!-- <Pagination />-->
+        <BlogPostPagination
+          :currentPage="this.category.pages"
+          @next-page="nextPageFetch"
+        />
       </div>
     </div>
   </div>
@@ -42,13 +45,23 @@ export default {
   },
 
   async mounted() {
-    const id = this.$route.params.postlist;
-    await axios
-      .get(`${this.$Api}/api/get_category_posts/?id=${id}&page=1`)
-      .then((res) => {
-        this.category = res.data;
-        console.log(this.category.category.title);
-      });
+    this.fetchPost();
+  },
+
+  methods: {
+    async fetchPost(page = null) {
+      const id = this.$route.params.postlist;
+      await axios
+        .get(`${this.$Api}/api/get_category_posts/?id=${id}&page=${page}`)
+        .then((res) => {
+          this.category = res.data;
+          console.log(this.category.category.title);
+        });
+    },
+
+    async nextPageFetch(e) {
+      this.fetchPost(e);
+    },
   },
 };
 </script>

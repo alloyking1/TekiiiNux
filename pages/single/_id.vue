@@ -13,7 +13,7 @@
                   <NuxtLink class="breadcrumb-item" to="/">Home</NuxtLink>
                   <NuxtLink class="breadcrumb-item" to="/blog">Blog</NuxtLink>
                   <li class="breadcrumb-item active" aria-current="page">
-                    {{ post.slug }}
+                    {{ post ? post.slug : "loading..." }}
                   </li>
                 </ol>
               </nav>
@@ -59,8 +59,9 @@ export default {
       post: {},
     };
   },
-  async mounted() {
+  async created() {
     const id = this.$route.params.id;
+    await console.log("console this when to see when it got here");
     await axios.get(`${this.$Api}/api/get_post/?id=${id}`).then((res) => {
       this.post = res.data.post;
     });
