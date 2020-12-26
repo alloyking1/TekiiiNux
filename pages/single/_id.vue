@@ -27,19 +27,11 @@
             </div>
 
             <!-- Tags + Sharing-->
+            <hr />
             <div
               class="row no-gutters position-relative align-items-center border-top border-bottom my-5"
             >
-              <div
-                class="col-md-6 py-2 py-dm-3 pr-md-3 text-center text-md-left"
-              >
-                Recent posts
-              </div>
-              <div
-                class="d-none d-md-block position-absolute border-left h-100"
-                style="top: 0; left: 50%; width: 1px"
-              ></div>
-              <div class="col-md-6 pl-md-3 py-2 py-md-3">Recent posts</div>
+              <BlogRelatedPost :slog="post.slug" />
             </div>
             <hr />
             <!-- comment -->
