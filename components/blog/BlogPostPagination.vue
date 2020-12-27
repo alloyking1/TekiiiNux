@@ -12,17 +12,23 @@
       </div>
       <nav class="mb-4" aria-label="Page navigation">
         <ul class="pagination justify-content-center" id="btn">
-          <li
-            class="page-item btn btn-secondary"
-            @click="pageNumberConfig('prev')"
-          >
-            <i class="fe-chevron-left">Prev</i>
+          <li>
+            <button
+              class="page-item btn btn-secondary"
+              @click="pageNumberConfig('prev')"
+              :disabled="lastPage === 'lastPrevPage'"
+            >
+              <i class="fe-chevron-left">Prev</i>
+            </button>
           </li>
-          <li
-            class="page-item btn btn-primary"
-            @click="pageNumberConfig('next')"
-          >
-            <i class="fe-chevron-right">Next</i>
+          <li>
+            <button
+              class="page-item btn btn-primary"
+              @click="pageNumberConfig('next')"
+              :disabled="lastPage(next) === 'lastNextPage'"
+            >
+              <i class="fe-chevron-right">Next</i>
+            </button>
           </li>
         </ul>
       </nav>
@@ -32,16 +38,12 @@
 
 <script>
 export default {
-  props: ["currentPage"],
+  props: ["PageCount", "totalPage"],
   data() {
     return {
       prev: 1,
       next: 1,
     };
-  },
-
-  mounted() {
-    console.log(this.currentPage);
   },
 
   methods: {
@@ -51,21 +53,25 @@ export default {
 
     pageNumberConfig(btn) {
       if (btn === "next") {
-        if (this.next < this.currentPage) {
-          this.next += 1;
-          this.pageNumber(this.next);
-        } else {
-          console.log("last page");
-        }
+        this.next++;
+        console.log(this.next);
+        this.pageNumber(this.next);
       }
 
       if (btn === "prev") {
-        if (this.prev < this.next && this.prev > 0) {
-          this.prev -= 1;
-          this.pageNumber(this.prev);
-        } else {
-          console.log("last page");
-        }
+        this.prev = this.next--;
+        console.log(this.prev);
+        this.pageNumber(this.prev);
+      }
+    },
+
+    lastPage(btnValue = null) {
+      console.log(this.PageCount);
+      if (this.PageCount === btnValue) {
+        return "lastNextPage";
+      }
+      if (this.next === 0) {
+        return "lastPrevPage";
       }
     },
   },

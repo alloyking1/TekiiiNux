@@ -9,7 +9,7 @@
       </NuxtLink>
     </div>
     <BlogPostPagination
-      :currentPage="this.recentPost.pages"
+      :PageCount="this.recentPost.pages"
       @next-page="nextPageFetch"
     />
   </div>
@@ -31,7 +31,7 @@ export default {
     async fetchPost(page = null) {
       const id = this.$route.params.postlist;
       await axios
-        .get(`${this.$Api}/api/get_recent_posts/?count=4&page=${page}`)
+        .get(`${this.$Api}/api/get_recent_posts/?count=2&page=${page}`)
         .then((res) => {
           this.recentPost = res.data;
         });
