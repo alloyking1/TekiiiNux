@@ -23,7 +23,7 @@ export default {
       recentPost: "",
     };
   },
-  async mounted() {
+  async fetch() {
     this.fetchPost();
   },
 
@@ -34,6 +34,7 @@ export default {
         .get(`${this.$Api}/api/get_recent_posts/?count=2&page=${page}`)
         .then((res) => {
           this.recentPost = res.data;
+          console.log(this.recentPost);
         });
     },
 
@@ -41,5 +42,7 @@ export default {
       await this.fetchPost(e);
     },
   },
+
+  fetchOnServer: true,
 };
 </script>
