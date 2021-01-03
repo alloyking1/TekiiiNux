@@ -52,12 +52,12 @@ export default {
       id: "",
     };
   },
-  async created() {
+  async fetch() {
     this.id = this.$route.params.id;
-    await console.log("console this when to see when it got here");
     await axios.get(`${this.$Api}/api/get_post/?id=${this.id}`).then((res) => {
       this.post = res.data.post;
     });
   },
+  fetchOnServer: true,
 };
 </script>
