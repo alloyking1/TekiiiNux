@@ -38,10 +38,12 @@ export default {
       categories: {},
     };
   },
-  async mounted() {
+  async fetch() {
     await axios.get(`${this.$Api}wp-json/wp/v2/categories`).then((res) => {
       this.categories = res.data;
     });
   },
+
+  fetchOnServer: true,
 };
 </script>

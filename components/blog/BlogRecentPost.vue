@@ -3,7 +3,7 @@
     <div v-for="(eachPost, index) in recentPost.posts" :key="index">
       <NuxtLink
         class="noRouterLink"
-        :to="{ name: 'single-id', params: { id: eachPost.id } }"
+        :to="{ name: 'singlepost-id', params: { id: eachPost.id } }"
       >
         <BlogPostCard :content="eachPost" />
       </NuxtLink>
@@ -31,7 +31,7 @@ export default {
     async fetchPost(page = null) {
       const id = this.$route.params.postlist;
       await axios
-        .get(`${this.$Api}/api/get_recent_posts/?count=2&page=${page}`)
+        .get(`${this.$Api}/api/get_recent_posts/?count=6&page=${page}`)
         .then((res) => {
           this.recentPost = res.data;
           console.log(this.recentPost);

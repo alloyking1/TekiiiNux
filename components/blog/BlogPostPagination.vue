@@ -66,7 +66,6 @@ export default {
     },
 
     lastPage(btnValue = null) {
-      console.log(this.PageCount);
       if (this.PageCount === btnValue) {
         return "lastNextPage";
       }

@@ -42,7 +42,7 @@ export default {
       category: "",
     };
   },
-  async mounted() {
+  async fetch() {
     const pages = 1;
     try {
       const request = await axios.get(
@@ -54,5 +54,6 @@ export default {
       console.log("there was an error, Post could not fetch");
     }
   },
+  fetchOnServer: true,
 };
 </script>

@@ -44,7 +44,7 @@ export default {
     };
   },
 
-  async mounted() {
+  async fetch() {
     this.fetchPost();
   },
 
@@ -63,5 +63,7 @@ export default {
       this.fetchPost(e);
     },
   },
+
+  fetchOnServer: true,
 };
 </script>

@@ -55,9 +55,6 @@ export default {
     };
 
     var d1 = new Date(Date.now());
-
-    console.log(d1);
-    console.log(myDateFormat(d1));
   },
 
   computed: {
