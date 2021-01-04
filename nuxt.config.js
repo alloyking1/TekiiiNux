@@ -11,9 +11,6 @@ export default {
     }, {
       name: 'viewport',
       content: 'width=device-width, initial-scale=1'
-    },{
-      name:'Content-Security-Policy',
-      content:'upgrade-insecure-requests'
     }, {
       hid: 'description',
       name: 'description',
