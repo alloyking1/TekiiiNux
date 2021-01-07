@@ -40,11 +40,19 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ['~/assets/styles/style.css', '~/assets/styles/simplebar.css', '~/assets/styles/custom.css', "vue-essential-slices/src/styles/styles.scss", "vue-essential-slices/src/styles/styles.scss", "vue-essential-slices/src/styles/styles.scss"],
  
-  plugins: ['~/plugins/CustomConfig.js', { src: '~plugins/GoogleAnalytics.js', mode: 'client' }],
+  plugins: ['~/plugins/CustomConfig.js'],
 
   components: true,
 
-  buildModules: ['@nuxtjs/dotenv'],
+  buildModules: ['@nuxtjs/dotenv', '@nuxtjs/google-analytics'],
+  googleAnalytics: {
+    id: process.env.NUXT_ENV_GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.NUXT_ENV_GOOGLE_ANALYTICS_ID
+    }
+  },
   
   modules: [
    ['@nuxtjs/axios', '@nuxtjs/dotenv', 'bootstrap-vue/nuxt'],
