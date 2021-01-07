@@ -7,10 +7,16 @@
       <div class="chat-popup" id="myForm2">
         <div class="form-container">
           <h1>Radio</h1>
-
-          <audio controls autoplay="autoplay">
-            <source src="http://66.85.88.174:80/hot108" type="audio/mp3" />
-          </audio>
+          <iframe
+            width="100%"
+            height="120"
+            :src="this.$RadioLink"
+            frameborder="0"
+          ></iframe>
+          <!-- <audio controls autoplay="autoplay">
+            <source :src="this.$RadioLink" type="audio/mp3" />
+            
+          </audio> -->
 
           <button type="button" class="btn cancel" @click="closeForm()">
             <i class="fe-x-square"></i>
@@ -25,6 +31,7 @@
 export default {
   mounted() {
     this.closeForm();
+    console.log(this.$RadioLink);
   },
 
   methods: {
