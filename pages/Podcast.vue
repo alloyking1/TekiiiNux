@@ -52,10 +52,18 @@
                 <h2 class="">Sections</h2>
               </div>
               <div class="row">
-                <iframe
+                <!-- <iframe
                   src="https://anchor.fm/anumadu-moses/embed/episodes/talkbox-ed6hcm"
                   height="100rem"
                   width="100rem"
+                  frameborder="0"
+                  scrolling="no"
+                ></iframe> -->
+
+                <iframe
+                  src="https://anchor.fm/tekiii/embed/episodes/Meet-and-greet-eon343"
+                  height="102px"
+                  width="400px"
                   frameborder="0"
                   scrolling="no"
                 ></iframe>
