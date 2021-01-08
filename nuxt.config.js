@@ -21,7 +21,8 @@ export default {
       type: 'image/x-icon',
       href: '/favicon.ico'
     }],
-    script: [{
+    script: [
+      {
       "src": "https://cdn.polyfill.io/v2/polyfill.min.js?features=Element.prototype.classList"
     }, {
       "src": "https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.min.js"
@@ -55,7 +56,7 @@ export default {
   },
   
   modules: [
-   ['@nuxtjs/axios', '@nuxtjs/dotenv', 'bootstrap-vue/nuxt'],
+   ['@nuxtjs/axios', '@nuxtjs/dotenv', 'bootstrap-vue/nuxt','@nuxtjs/google-analytics'],
   ],
 
   build: {
