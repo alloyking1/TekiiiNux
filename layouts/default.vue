@@ -2,8 +2,8 @@
   <div>
     <Nav />
     <Nuxt />
-    <RadioSoundComponent />
-    <RadioChat />
+    <!-- <RadioSoundComponent /> -->
+    <!-- <RadioChat /> -->
     <FooterTwo />
   </div>
 </template>

@@ -29,7 +29,7 @@
           <div class="navbar-nav">
             <NuxtLink to="/blog" class="nav-item nav-link">Blog</NuxtLink>
             <NuxtLink to="/podcast" class="nav-item nav-link">Podcast</NuxtLink>
-            <a class="nav-item nav-link" href="#" @click="openForm()">Radio</a>
+            <!-- <a class="nav-item nav-link" href="#" @click="openForm()">Radio</a> -->
             <NuxtLink to="/about" class="nav-item nav-link">About</NuxtLink>
             <NuxtLink to="/contact" class="nav-item nav-link">Contact</NuxtLink>
           </div>

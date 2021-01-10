@@ -26,12 +26,12 @@
                 </div>
                 <br />
                 <div>
-                  <button
+                  <!-- <button
                     class="btn btn-outline-primary mr-2"
                     @click="openForm()"
                   >
                     Radio
-                  </button>
+                  </button> -->
 
                   <NuxtLink to="/" class="btn btn-outline-primary"
                     >Home</NuxtLink
@@ -49,16 +49,9 @@
           <div class="container pt-lg pb-300 p-5">
             <div class="row text-center justify-content-center">
               <div class="col-lg-10">
-                <h2 class="">Sections</h2>
+                <h2 class="">Coming Soon!!</h2>
               </div>
-              <div class="row">
-                <!-- <iframe
-                  src="https://anchor.fm/anumadu-moses/embed/episodes/talkbox-ed6hcm"
-                  height="100rem"
-                  width="100rem"
-                  frameborder="0"
-                  scrolling="no"
-                ></iframe> -->
+              <!-- <div class="row">
 
                 <iframe
                   src="https://anchor.fm/tekiii/embed/episodes/Meet-and-greet-eon343"
@@ -67,10 +60,9 @@
                   frameborder="0"
                   scrolling="no"
                 ></iframe>
-              </div>
+              </div> -->
             </div>
           </div>
-          <!-- SVG separator -->
         </section>
       </main>
     </div>

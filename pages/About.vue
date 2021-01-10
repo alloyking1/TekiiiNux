@@ -39,13 +39,20 @@
                 </NuxtLink>
               </div>
               <div class="col-sm-4 px-2 mb-3">
-                <a
+                <!-- <a
                   class="card card-body py-5 border-0 box-shadow-lg text-center mb-3"
                   href="#"
                   @click="openForm()"
                   ><i class="fe-music text-danger h1 mb-3"></i>
                   <h3 class="h5 mb-0">Radio</h3></a
-                ><a
+                > -->
+                <NuxtLink
+                  to="/podcast"
+                  class="card card-body py-5 border-0 box-shadow-lg text-center mb-3"
+                  ><i class="fe-music text-danger h1 mb-3"></i>
+                  <h3 class="h5 mb-0">Podcast</h3>
+                </NuxtLink>
+                <a
                   class="card card-body py-5 border-0 box-shadow-lg text-center"
                   :href="this.$SlackLink"
                   target="_blank"

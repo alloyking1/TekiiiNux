@@ -28,12 +28,12 @@
               class="d-flex align-items-center justify-content-center justify-content-md-start"
             >
               <div>
-                <button
+                <!-- <button
                   class="btn btn-outline-primary mr-2"
                   @click="openForm()"
                 >
                   Radio
-                </button>
+                </button> -->
 
                 <router-link to="/podcast" class="btn btn-outline-primary"
                   >Podcast</router-link
